@@ -3,3 +3,8 @@ git add .
 git commit -m "Learned Python Functions"
 git push
 
+
+
+change file name if
+git add -A
+git commit -m "Fix folder name"
