@@ -1,0 +1,23 @@
+{
+    "key":
+    [
+        {
+            "Name":"Parag",
+            "age":16,
+            "Degree":"Btech"
+
+        },
+        {
+            "Name":"Rohan",
+            "age":18,
+            "Degree":"Btech"
+
+        },
+        {
+            "Name":"Mayank",
+            "age":19,
+            "Degree":"Btech"
+
+        }      
+    ]
+}
