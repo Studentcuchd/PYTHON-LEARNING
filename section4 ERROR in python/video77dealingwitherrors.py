@@ -28,7 +28,7 @@ class car:
 
 parent_obj=Garge_parent("BMW","2021")
 
-try:
+try:  
     car_obj=car()
     car_obj.add_car(parent_obj)
     

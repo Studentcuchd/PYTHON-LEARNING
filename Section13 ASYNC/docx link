@@ -1,0 +1,34 @@
+ASYNCHRONOUS PYTHON THREADING AND MULTIPROCESSING
+
+Bascis ->  https://medium.com/velotio-perspectives/an-introduction-to-asynchronous-programming-in-python-af0189a88bbb
+
+
+DETAIL->  https://realpython.com/async-io-python/#other-asyncio-tools
+
+
+
+
+TOPIC WISE LIST
+
+1. THREADING ->        https://realpython.com/intro-to-python-threading/
+
+
+2. GIL -> https://realpython.com/python-gil/
+
+
+3. MULTIPROCESSING ->  https://realpython.com/python-multiprocessing/
+
+
+4. ASYNCIO -> https://realpython.com/async-io-python/#other-asyncio-tools
+
+
+
+VIDEO LIST 
+1. THREADING -> https://www.youtube.com/watch?v=IEEhzQoKtQU
+
+
+2. MULTIPROCESSING -> https://youtu.be/fKl2JW_qrso
+
+3. GIL -> https://www.youtube.com/watch?v=IEEhzQoKtQU
+
+4. ASYNCIO -> https://www.youtube.com/watch?v=IEEhzQoKtQU
