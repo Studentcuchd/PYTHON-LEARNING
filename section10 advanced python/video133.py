@@ -41,7 +41,8 @@ print(a2)
 print("way 2 none as a default value")
 
 def acc_detail2(type:str,name:str,acc_holders=None):
-    if not acc_holders:
+    # if not acc_holders:
+    if acc_holders is None:
         acc_holders=[]
     print(id(acc_holders))
     acc_holders.append(name)
