@@ -39,3 +39,18 @@ flight_obj=flight([segment_obj1,segment_obj2,segment_obj3])
 
 
 print(flight_obj)
+
+print("\n")
+
+print("Changing value using setter")
+
+print("\n")
+
+flight_obj.departure_point="mumbai"
+
+print(flight_obj)
+
+
+print("\n"," value getting ","\n")
+
+print(flight_obj.departure_point)
