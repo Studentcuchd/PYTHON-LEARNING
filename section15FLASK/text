@@ -1,3 +1,5 @@
 pipenv install flask
 
 pipenv shell
+
+flask --version

@@ -78,4 +78,41 @@ print(count_l1)
 
 
 
+print("\n")
+print("\n")
+
 # Defaultdict
+from collections import defaultdict
+
+user_details=[("Parag","cu"),("Rohan","MIT"),("Mayank","DU"),("Deepika","cu")]
+
+
+# new_list=[]
+
+
+new_list=defaultdict(list)
+for name,place in user_details:
+    
+    """  
+    instead of this we use defaultdict
+    
+        if name not in new_list:
+        new_list[name]=[]
+    
+    """
+
+    new_list[name].append(place)
+
+
+print(new_list["Parag"]) 
+
+
+# give empty list but i want to throw an error
+
+# new_list.default_factory=int  #0
+
+new_list.default_factory=None  #error
+
+new_list.default_factory=str #space
+
+print(new_list["Annie"])

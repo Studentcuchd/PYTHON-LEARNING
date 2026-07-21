@@ -1,0 +1,92 @@
+1. OOPS IN DETAILS + SOLID 
+
+2. Decorator
+
+3. Comprehensions and Lambda fun
+
+4. Generator
+
+5. Async Programming 
+
+6. Database
+
+7. File handling
+
+8. Error handling 
+
+9. String immutability + Garbage collection
+
+
+
+
+Today'S TARGET
+
+1. ASYNC AT NIGHT AT HOME + advanced oops
+
+2. AFTER 6PM PENDING TOPICS OF remaining sections
+
+3. DURING OFFICE -> FLASK + API + Python Libraries + unit testing
+
+
+
+
+
+
+
+Important topics 
+
+Python datastructures list tuple set properties when to use immutability.......................READ
+
+
+
+
+strings........................................................................................Docx read 
+
+
+
+
+oops advanced...................
+                               ...........>    Youtube + gpt each concept in details
+solid...........................
+
+
+
+
+
+error, exception handling .................................................. YOUTUBE
+
+
+
+
+
+asynchronous python .................................................> 	COREY YOUTUBE
+
+
+
+decorators............
+                     ..............> YOUTUBE
+generators............
+
+
+
+
+
+parameters type, kwargs args positional argument, keyword argument.....................READ
+
+
+
+
+Less important
+
+Unit test
+
+file handling
+
+type hinting
+m 
+flask to project se hojega
+
+
+
+
+
