@@ -14,7 +14,7 @@ async def fetch_notification():
     print("fetching notification")
     await sleep(2)
     print("Done fetching notification")
-           
+    
     return "5 notifications"
 
 

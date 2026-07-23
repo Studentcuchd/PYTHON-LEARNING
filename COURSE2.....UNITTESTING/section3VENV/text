@@ -1,0 +1,6 @@
+pip install virtualenv
+
+python -m venv myenv
+
+source/Scripts/activate  # On Windows use `myenv\Scripts\activate`
+
