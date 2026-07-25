@@ -1,9 +1,9 @@
 import sqlite3
 
 
-from ClassManager.internclass import Intern
-from ClassManager.mentorclass import Mentor
-from ClassManager.problemclass import Problem
+from Model.internclass import Intern
+from Model.mentorclass import Mentor
+from Model.problemclass import Problem
 
 
 class DataBaseManager:
@@ -236,3 +236,6 @@ class DataBaseManager:
         )
       )
     return problems_list
+  
+    
+    
