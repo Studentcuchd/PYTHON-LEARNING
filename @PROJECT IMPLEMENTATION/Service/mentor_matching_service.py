@@ -28,7 +28,8 @@ class MentorMatchingService:
                    {
                        "mentor":mentor,
                        "score":score,
-                       "matched_skills":matched_skills
+                       "matched_skills":matched_skills,
+                       "total_required_skills": len(entered_problem.req_skill)
                    }
                )
                

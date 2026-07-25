@@ -91,9 +91,54 @@ def view_mentors(database: DataBaseManager) -> None:
            
 
 def add_problem(database: DataBaseManager) -> None:
-    pass
+    interns_list=database.get_all_interns()
+    if not interns_list:
+        print("No intern found Please add Intern")
+        return
+    
+    view_interns(database)
+    
+    intern_id=int(input("Enter Your Intern ID="))
+    
+    valid_intern=False
+    
+    for intern in interns_list:
+        if intern.intern_id==intern_id:
+            valid_intern=True
+            break
+    
+    if not valid_intern:
+        print("Invalid Intern id")
+        return
+    
+    title = input("Enter Problem Title= ").strip()
+    description = input("Enter Problem Description= ").strip()
+    
+    required_skills=set()
+    
+    total_skills = int(input("Enter total required skills: "))
+    
+    print("\n")
+    print("Enter required skills one by one")
+    print("\n")
+    
+    for i in range(total_skills):
+        skill=input(f"Enter {i+1} skill=").strip()
 
+        if skill:
+            required_skills.add(skill)
+    
+    
+    problem_obj = Problem(
+        title,
+        description,
+        required_skills,
+        intern_id
+    )
 
+    database.add_problem(problem_obj)
+
+    print("Problem added successfully.")
 
 
 
@@ -117,12 +162,35 @@ def view_problems(database: DataBaseManager) -> None:
         print("**********************************************\n")
 
 
+def find_matching_mentors(database :DataBaseManager, matching_service: MentorMatchingService) -> None:
+    problem_list = database.get_all_problems()
 
-
-def find_matching_mentors(
-    matching_service: MentorMatchingService,
-) -> None:
-    pass
+    if not problem_list:
+        print("No Problem posted right now please add problem")
+        return   
+    
+    view_problems(database)
+    problem_id=int(input("Pleease enter id of your problem="))
+    
+    matching_mentors_list=matching_service.find_matching_mentors(problem_id)
+    
+    if not matching_mentors_list:
+        print("No match found")
+        return
+    
+    print("\n***Matching Mentors***")
+    
+    for match in matching_mentors_list:
+        
+        mentor=match['mentor']
+        print(f"Mentor id= {mentor.mentor_id}")
+        print(f"Mentor name= {mentor.name}")
+        print(f"Mentor email= {mentor.email}")
+        print(f"Total Number of matched skills= {match['score']} / {match['total_required_skills']}")
+        print(f"Matched skills= {",".join(match['matched_skills'])}")
+        
+        print("\n*********************************************\n")
+        
 
 
 def main() -> None:
@@ -157,7 +225,7 @@ def main() -> None:
                 view_problems(database)
 
             elif choice == 7:
-                find_matching_mentors(matching_service)
+                find_matching_mentors(database,matching_service)
 
             elif choice == 8:
                 database.close()
