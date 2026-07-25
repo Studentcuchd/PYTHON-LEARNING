@@ -12,7 +12,7 @@ class DataBaseManager:
     self.connection=sqlite3.connect(db_name)
     self.connection.execute("PRAGMA foreign_keys = ON")
     self.cursor=self.connection.cursor()    
-    
+    self.create_tables() 
     
   def create_tables(self) ->None:
     with self.connection:
