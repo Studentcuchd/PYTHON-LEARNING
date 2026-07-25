@@ -1,4 +1,4 @@
-class Problem():
+class Problem:
     def __init__(self,
         title :str,
         description :str,
@@ -16,3 +16,4 @@ class Problem():
     def problem_required_skill(self,skill :str) ->None:
         self.req_skill.add(skill.strip().lower())
         
+
