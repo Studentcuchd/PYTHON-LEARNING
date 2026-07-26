@@ -1,13 +1,18 @@
-from Repository.database_manager import DataBaseManager
+from Repository.mentor_repository import MentorRepository
+from Repository.problem_repository import ProblemRepository
+
 
 class MentorMatchingService:
-    def __init__(self,database : DataBaseManager) ->None:
+    def __init__(self,mentor_repository:MentorRepository,problem_repository:ProblemRepository) ->None:
         
-        self.database=database  
+        self.mentor_repository=mentor_repository
+        self.problem_repository=problem_repository
+            
+    
     
     def find_matching_mentors(self,problem_id: int) ->list[dict]:
-        problems=self.database.get_all_problems()
-        mentors=self.database.get_all_mentors()
+        problems=self.problem_repository.get_all_problems()
+        mentors=self.mentor_repository.get_all_mentors()
         
         entered_problem=None
         for problem in problems:

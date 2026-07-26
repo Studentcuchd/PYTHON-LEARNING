@@ -48,7 +48,7 @@ async def main():
         with ProcessPoolExecutor(max_workers=2) as process_executor:
             
             async with TaskGroup() as tg:
-                task1=tg.create_task(run_in_thread(
+                task1=tg.create_task(run_in_thread(.............
                     loop,thread_executor,"pdf.csv"
                 ))
                 
