@@ -6,6 +6,7 @@ class Database:
   def __init__(self,db_name):
     self.connection=sqlite3.connect(db_name)
     self.connection.execute("PRAGMA foreign_keys = ON")
+    
     self.cursor=self.connection.cursor()    
     self.create_tables() 
     

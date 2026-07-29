@@ -38,9 +38,5 @@ class MentorMatchingService:
                    }
                )
                
-        matching_mentors.sort(
-            key=lambda match : match['score'],
-            
-            reverse=True
-        )
+        matching_mentors.sort(lambda match : match['score'],reverse=True)
         return matching_mentors

@@ -1,6 +1,7 @@
 from threading import Thread
 import random
 import time
+
 """
 This will run perfectly  as it is like a synchronous code
 

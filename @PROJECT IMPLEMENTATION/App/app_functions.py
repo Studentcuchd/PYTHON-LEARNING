@@ -23,8 +23,8 @@ def print_menu() -> None:
  
     
 def add_intern(intern_repository:InternRepository) -> None:
-    name=input("enter your name=").strip()
-    email=input("enter you eamil=").strip()
+    name=input("enter your name=")
+    email=input("enter you eamil=")
     intern_obj=Intern(name,email)
     intern_repository.add_intern(intern_obj)
     print("Intern Added successfully")
@@ -35,18 +35,18 @@ def view_interns(intern_repository:InternRepository) ->None:
     interns_list=intern_repository.get_all_interns()
      
     if not interns_list:
-        print("No intern found Please add Intern")
+        print("No intern found please add intern")
         return
     
-    print("\n------ Interns ------")
+    print("\n")    
+    print("Interns")
+    print("\n")
     
     for intern in interns_list:
         print(f"ID= {intern.intern_id}")
         print(f"Name= {intern.name}")
         print(f"Email= {intern.email}")
-        
-        print("**********************************************\n")
- 
+        print("\n") 
  
         
 
@@ -56,9 +56,9 @@ def add_mentor(mentor_repository:MentorRepository) -> None:
     
     skill_set=set()
     total_skills=int(input("Enter total number of skills you have="))
-    print("......Enter your skills one by one......")
+    print("\n Enter your skills one by one \n")
     for i in range(total_skills):
-        skill_input=input(f"Enter your {i+1} skill=").strip()
+        skill_input=input(f"Enter your skill=")
         if skill_input:
             skill_set.add(skill_input)
 
@@ -77,14 +77,16 @@ def view_mentors(mentor_repository:MentorRepository) -> None:
         print("No Mentor found Please add a mentor")
         return 
     
-    print("\n------ Mentors ------")
+    print("\n")
+    print("Mentors")
+    print("\n")
        
     for mentor in mentor_list:
         print(f"ID= {mentor.mentor_id}")
         print(f"Name= {mentor.name}")
         print(f"Email= {mentor.email}")
         print(f"Skills= {','.join(mentor.expertise)}")
-        print("**********************************************\n")
+        print("\n")
         
 
 
@@ -92,7 +94,7 @@ def view_mentors(mentor_repository:MentorRepository) -> None:
 def add_problem(problem_repository: ProblemRepository,intern_repository:InternRepository) -> None:
     interns_list= intern_repository.get_all_interns()
     if not interns_list:
-        print("No intern found Please add Intern")
+        print("No intern found please add intern")
         return
     
     view_interns(intern_repository)
@@ -110,19 +112,19 @@ def add_problem(problem_repository: ProblemRepository,intern_repository:InternRe
         print("Invalid Intern id")
         return
     
-    title = input("Enter Problem Title= ").strip()
-    description = input("Enter Problem Description= ").strip()
+    title = input("Enter Problem Title= ")
+    description = input("Enter Problem Description= ")
     
     required_skills=set()
     
-    total_skills = int(input("Enter total required skills: "))
+    total_skills = int(input("Enter total required skills= "))
     
     print("\n")
     print("Enter required skills one by one")
     print("\n")
     
     for i in range(total_skills):
-        skill=input(f"Enter {i+1} skill=").strip()
+        skill=input(f"Enter skill=")
 
         if skill:
             required_skills.add(skill)
@@ -150,8 +152,10 @@ def view_problems(problem_repository: ProblemRepository) -> None:
     if not problem_list:
         print("No problems found.")
         return
-
-    print("\n------ Problems ------")
+    
+    print("\n")
+    print(" Problems")
+    print("\n")
 
     for problem in problem_list:
         print(f"Problem ID = {problem.problem_id}")
@@ -159,7 +163,7 @@ def view_problems(problem_repository: ProblemRepository) -> None:
         print(f"Description= {problem.description}")
         print(f"Intern ID= {problem.intern_id}")
         print(f"Required Skills= {', '.join(problem.req_skill)}")
-        print("**********************************************\n")
+        print("\n")
   
   
         
@@ -169,7 +173,7 @@ def find_matching_mentors(problem_repository: ProblemRepository,matching_service
     problem_list = problem_repository.get_all_problems()
 
     if not problem_list:
-        print("No Problem posted right now please add problem")
+        print("No Problem in the list please add problem")
         return   
     
     view_problems(problem_repository)
@@ -181,17 +185,18 @@ def find_matching_mentors(problem_repository: ProblemRepository,matching_service
         print("No match found")
         return
     
-    print("\n***Matching Mentors***")
-    
+    print("\n")
+    print("Matching Mentors")
+    print("\n")
+
     for match in matching_mentors_list:
         
         mentor=match['mentor']
         print(f"Mentor id= {mentor.mentor_id}")
         print(f"Mentor name= {mentor.name}")
         print(f"Mentor email= {mentor.email}")
-        print(f"Total Number of matched skills= {match['score']} / {match['total_required_skills']}")
-        print(f"Matched skills= {",".join(match['matched_skills'])}")
+        print(f"Total matched skills= {match['score']} / {match['total_required_skills']}")
+        print(f"Matched skills name= {",".join(match['matched_skills'])}")
         
-        print("\n*********************************************\n")
         
 

@@ -3,6 +3,7 @@ from abc import ABC, ABCMeta, abstractmethod
 
 # class ABC(metaclass=ABCMeta):
 #     pass
+
 class vehicle(ABC):
     def __init__(self,brand):
         self.brand=brand

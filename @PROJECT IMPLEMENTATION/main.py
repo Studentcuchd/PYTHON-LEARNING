@@ -53,7 +53,7 @@ def main() -> None:
         print_menu()
 
         try:
-            choice = int(input("\nEnter your choice: "))
+            choice = int(input("\nEnter your choice= "))
 
             if choice == 1:
                 add_intern(intern_repository)
@@ -78,14 +78,14 @@ def main() -> None:
 
             elif choice == 8:
                 database.close()
-                print("\nThank you for using the system.")
+                print("\nThank you for using the system")
                 break
 
             else:
-                print("\nInvalid choice. Please try again.")
+                print("\nInvalid choice. Please try again")
 
         except ValueError:
-            print("\nPlease enter a valid number.")
+            print("\nPlease enter a valid number")
 
 
 if __name__ == "__main__":

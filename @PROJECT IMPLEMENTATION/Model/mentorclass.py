@@ -12,6 +12,5 @@ class Mentor:
         self.mentor_id=mentor_id
         
         
-    def add_skill(self, skill : str)->None:
-        self.expertise.add(skill.strip().lower())
+
     

@@ -13,7 +13,5 @@ class Problem:
         self.problem_id=problem_id
 
         
-    def problem_required_skill(self,skill :str) ->None:
-        self.req_skill.add(skill.strip().lower())
-        
+
 

@@ -18,7 +18,7 @@ class InternRepository:
                 """,
                 (intern.name,intern.email)
                 )
-            intern.intern_id=self.database.cursor.lastrowid
+            intern.intern_id=self.cursor.lastrowid
 
     def get_all_interns(self)->list[Intern]:
         
@@ -28,7 +28,7 @@ class InternRepository:
         SELECT intern_id,name,email
         FROM interns
         """)
-        intern_tuple_rows=self.database.cursor.fetchall()
+        intern_tuple_rows=self.cursor.fetchall()
         
         for intern_id,name,email in intern_tuple_rows:
             interns_list.append(Intern(
