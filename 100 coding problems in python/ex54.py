@@ -1,0 +1,11 @@
+d = {"employees":[{"firstName": "John", "lastName": "Doe"},
+                {"firstName": "Anna", "lastName": "Smith"},
+                {"firstName": "Peter", "lastName": "Jones"}],
+"owners":[{"firstName": "Jack", "lastName": "Petter"},
+          {"firstName": "Jessy", "lastName": "Petter"}]}
+
+list1=d['employees']
+dict1=list1[1]
+dict1['lastName']='Smooth'
+
+print(d)
